@@ -1,0 +1,181 @@
+body {
+  font-family: Brawler, Georgia, serif;
+  color: #444; 
+  background: #FFF7ED url('../images/webtreatsetc.jpg'); 
+  margin: 0; padding: 0;
+  line-height: 120%;
+}
+h1 {color: #8F2C26; font-size: 3em; line-height: 1em; margin-bottom: 5px; text-shadow: 1px 1px 0 rgb(232,220,188), 2px 2px 0 #8F2C26}
+h2, h3, h4, h5 {color: #8F2C26; text-shadow: 1px 1px 0 rgb(232,220,188), 2px 2px 0 #999}
+
+code {font-family: Cousine, monospace; background: rgba(255,255,255,.7)}
+li {line-height: 1.5em; position: relative;}
+ul {padding-left: 1em; list-style-type: none}
+
+ul li { padding-left: 2em}
+ul li:hover {background: rgba(255,255,255,.4)}
+
+a:link, a:visited {color: #1F80B5; text-decoration: none; border-bottom: solid 1px #444}
+a:visited {color: #7BA1B5;}
+a:hover {background: #eee}
+
+#title {position: relative; padding-left: 1.5em}
+#title::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  border: solid 2px #333;
+  box-shadow: 3px 3px 0 #666;
+  background: rgba(255,255,255,.5);
+}
+#title::after {
+  content: "\2713";
+  position: absolute;
+  top: 0; left: 0;
+  font-size: 1.5em;
+  color: rgb(115,181,7);
+  text-shadow: 1px 1px 0 rgba(255,255,255,.5), 2px 2px 0 #eee
+}
+
+
+.ribbon img {
+  position: absolute; top: 0; right: 0;
+  border: 0;
+  z-index: +1;
+}
+
+#github-path {
+  position: absolute; 
+  top: 1em; right: 3em;
+  font-size: 1.5em;
+  font-style: normal;
+}
+#github-path span {color: inherit; border: none; font-weight: bold}
+  
+#header {
+  margin-bottom: 1em;
+  background: url('../images/Octocat.png') top right no-repeat;
+  padding-right: 100px;
+}
+
+#intro {
+  position: relative;
+  margin-bottom: 3em;
+}
+
+#rules {display: inline-block; background: #F5EFD3}
+
+.claim {display: block; color: #333;}
+.list-title {clear: left;}
+
+#main {
+  position: relative;
+  padding: 1.5em 3em; margin: 2em; 
+  max-width: 800px;
+  background: rgba(241,232,199,.95);
+  box-shadow: 
+    0 0 60px rgba(181,138,72,.9) inset,
+    0 0 0 1px #8F2C26,
+    0 0 0 4px rgba(211,185,139,.95),
+    0 0 20px rgba(0,0,0,.95);
+}
+
+#main::after {
+  content: '\2605 \2605';
+  color: #333;
+  position: absolute;
+  display: block;
+  bottom: 3em; left: 50%;
+  margin-left: -1.5em;
+}
+
+
+#list {
+  position: relative; 
+  padding: 0 0 4em; 
+  margin: 2em 0 0;
+  border-top: solid 1px #666;
+}
+
+#list::before {
+  content: '\2605';
+  color: #333;
+  position: absolute;
+  display: block;
+  top: -.4em; left: 50%;
+  font-size: 2em;
+  margin-left: -.5em;
+  text-shadow: 8px 0 0 rgb(232,220,188), -8px 0 0 rgb(232,220,188);
+}
+#list::after {
+  content: '\2605 \2605';
+  color: #333;
+  position: absolute;
+  letter-spacing: 2em;
+  display: block;
+  font-size: 1em;
+  top: -.6em; left:50%;
+  margin-left: -2em;
+  text-shadow: 7px 0 0 rgb(232,220,188), -7px 0 0 rgb(232,220,188);
+}
+
+#list h2 {
+  padding-top: 1em; 
+  margin-top: 1em;
+  border-top: solid 1px rgba(0,0,0,.2)
+}
+
+#list h2:first-child {
+  border-top: none;
+}
+
+ul li::before {
+  content: '';
+  width: .8em;
+  height: .8em;
+  display: block;
+  position: absolute;
+  bottom: .3em; left: 0;
+  border: solid 1px #333;
+  box-shadow: 3px 3px 0 #666;
+  background: rgba(255,255,255,.5);
+}
+
+ul li.checked::after {
+  content: "\2713";
+  position: absolute;
+  top: 0; left: 0;
+  font-size: 1.5em;
+  color: rgb(115,181,7);
+  text-shadow: 1px 1px 0 rgba(255,255,255,.5)
+}
+
+ul li.checked {color: #666}
+
+#html5 {
+  width: 64px; height: 64px; 
+  text-indent: -999px; overflow: hidden; 
+  background: url('../images/html5.png') right top no-repeat;
+  position: absolute;
+  bottom: 0; right: 5px;
+}
+
+#humans {
+  width: 88px; height: 31px; 
+  background: url('../images/humanstxt.gif') right top no-repeat;
+  position: absolute;
+  bottom: 10px; right: 75px;
+}
+
+#humans a {
+  width: 100%; height: 100%;
+  display: block;
+  text-indent: -999px; overflow: hidden; 
+  border: none;
+}
+
+#humans a:hover {background: none}
+
