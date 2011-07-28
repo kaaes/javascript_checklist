@@ -66,27 +66,4 @@
     }
     return hash;
   }
-})()
-
-a();
-function a() {
-  return 'a'
-}
-// 'a'
-
-a();
-var a = function() {
-  return 'a'
-}
-// TypeError: undefined is not a function
-
-[] == ![] // true
-
-Function.prototype.curry = function() {
-  var args1 = Array.prototype.splice.call(arguments, 0);
-  _this = this;
-  return function() {    
-    var args2 = Array.prototype.splice.call(arguments, 0)
-    return _this.apply(this, args1.concat(args2))
-  }
-}
+})();
