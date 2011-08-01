@@ -56,17 +56,18 @@ project : /javascript_checklist
 ##Browsers and DOM
 
 * memory leaks in browsers
-* compilators 
+* compilers 
 
 ##Script loading
 
 * asynchronous/deferred script loading
 * scripts concatenation
 
-##Event
+##Events
 
 * DOM events bubbling and capturing
-* cancelable events, bubbling events
+  [Quirksmode - Event order][bubbling and capturing]
+* cancelable events
 * event delegation
 * custom events
 
@@ -87,3 +88,4 @@ project : /javascript_checklist
 [module pattern]: http://http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 [design patterns]: http://addyosmani.com/resources/essentialjsdesignpatterns/book/
 [json subset]: http://timelessrepo.com/json-isnt-a-javascript-subset
+[bubbling and capturing]: http://www.quirksmode.org/js/events_order.html
