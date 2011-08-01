@@ -1,20 +1,21 @@
 ---
 title: Home
 layout: default
-project : /javascript_checklist_
+project : /javascript_checklist
 ---
 ##Variables
 
 * defining variables (default value, `var` and `let` operators)
 * variable scopes (local and global, block in ECMAScript6)
-* variable hoisting
+* variable hoisting 
+  [Adequately Good - JavaScript Scoping and Hoisting][hoisting]
 * `undefined` vs `null`
 
 ##Operators
 
 * operators precedence
-[* how `+` behaves on strings and numbers
-]* `||` and `&&`
+* how `+` behaves on strings and numbers
+* `||` and `&&`
 * real life usage for bitwise operators `|` `~`, `~~`, `>>>`
 * `typeof` vs `instanceof` 
 
@@ -50,9 +51,10 @@ project : /javascript_checklist_
 * `prototype` object and prototype chain
 * constructors and difference between `fun()` and `new fun()`
 
-##DOM
+##Browsers and DOM
 
 * memory leaks in browsers
+* compilators 
 
 ##Script loading
 
@@ -73,4 +75,12 @@ project : /javascript_checklist_
 ##Misc
 
 * how `eval` works
-* module pattern
+* design patterns
+  [Adequately Good - JavaScript Module Pattern: In-Depth][module pattern]
+  [Essential JavaScript Design Patterns For Beginners, Volume 1][design patterns]
+
+##Reference
+
+[hoisting]: http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting
+[module pattern]: http://http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
+[design patterns]: http://addyosmani.com/resources/essentialjsdesignpatterns/book/
