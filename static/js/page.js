@@ -15,7 +15,6 @@ YUI().use('node', 'json', function(Y){
     var linkList = Y.Node.create('<ol></ol>'),
         links = listContainer.all('a');
         
-    listContainer.append(linkList);
     links.each(function(el, i){
       var index = i + 1,
           elId = 'list-element-' + index,
@@ -28,6 +27,7 @@ YUI().use('node', 'json', function(Y){
       parent.append('<a href="#' + elId + '" title="' + el.getContent() + '"><sup>[' + index + ']</sup></a>')
     });
     listContainer.addClass('referenced-list');
+    listContainer.append(linkList);
   }
       
   function getChecklistObject() {

@@ -77,7 +77,7 @@ project : /javascript_checklist
 ##Misc
 
 * how `eval` works
-* design patterns
+* design patterns in JS
   [Adequately Good - JavaScript Module Pattern: In-Depth][module pattern]
   [Essential JavaScript Design Patterns For Beginners, Volume 1][design patterns]
 
