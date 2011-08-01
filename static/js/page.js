@@ -25,7 +25,7 @@ YUI().use('node', 'json', function(Y){
       listContainer.append(item);
       item.append(el);
       el.set('id', elId);
-      parent.append('<a href="#' + elId + '"><sup>[' + index + ']</sup></a>')
+      parent.append('<a href="#' + elId + '" title="' + el.getContent() + '"><sup>[' + index + ']</sup></a>')
     });
     listContainer.addClass('referenced-list');
   }
