@@ -11,6 +11,7 @@ h2, h3, h4, h5 {color: #8F2C26; text-shadow: 1px 1px 0 rgb(232,220,188), 2px 2px
 code {font-family: Cousine, monospace; background: rgba(255,255,255,.7)}
 li {line-height: 1.5em; position: relative;}
 ul {padding-left: 1em; list-style-type: none}
+sup {line-height: 0}
 
 ul li { padding-left: 2em}
 ul li:hover {background: rgba(255,255,255,.4)}
