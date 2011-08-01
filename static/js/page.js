@@ -1,18 +1,10 @@
 YUI().use('node', 'json', function(Y){
-  var storageKey = 'jsChecklist.list',
-      checklist = getChecklistObject(),
-      listContainer = Y.one('#list');
+  var listContainer = Y.one('#list');
       
-  Y.on('domready', function(){
-    if(supports_html5_storage()) {
-      setCheckedItems();    
-      Y.on('click', markListItem, 'li');
-    }    
-    createLinkList();
-  });
+  Y.on('domready', createLinkList);
       
   function createLinkList() {
-    var linkList = Y.Node.create('<ol></ol>'),
+    var linkList = Y.Node.create('<ol id="link-list"></ol>'),
         links = listContainer.all('a');
         
     links.each(function(el, i){
@@ -24,67 +16,24 @@ YUI().use('node', 'json', function(Y){
       linkList.append(item);
       item.append(el);
       el.set('id', elId);
-      parent.append('<a href="#' + elId + '" title="' + el.getContent() + '"><sup>[' + index + ']</sup></a>')
+      parent.append('<a class="reference" href="#' + elId + '" title="' + el.getContent() + '"><sup>[' + index + ']</sup></a>')
     });
+    
     listContainer.addClass('referenced-list');
     listContainer.append(linkList);
-  }
-      
-  function getChecklistObject() {
-    var checklistStr = localStorage.getItem(storageKey) || '[]',
-        list;
-            
-    try {
-      list = Y.JSON.parse(checklistStr);
-    } catch(e) {
-      Y.log('Cannot parse checklist object')
-    }
-    return list || []
-  }
-      
-  function setCheckedItems() {
-    var items = listContainer.all('li');
-    items.each(function(item){
-      var hash = hashCode(item.getContent());
-      if(checklist.indexOf(hash) > -1) {
-        item.addClass('checked');
-      }
-    })
-  }
-      
-  function markListItem(evt) {
-    var hash = hashCode(this.getContent());
-    this.toggleClass('checked');
-    toggleValueInStorage(hash)
-  }
     
-  function toggleValueInStorage(value) {
-    var hashIndex = checklist.indexOf(value);
-    if(hashIndex === -1) {
-      checklist.push(value);
-    } else {
-      checklist.splice(hashIndex, 1)
-    }    
-    localStorage.setItem(storageKey, Y.JSON.stringify(checklist))
+    Y.on('click', markChosenReference, 'a.reference');
   }
   
-  function hashCode(str){
-    var hash = 0, 
-        char;
-    if (str.length == 0) return hash;
-    for (i = 0; i < str.length; i++) {
-      char = str.charCodeAt(i);
-      hash = ((hash<<5)-hash) + char;
-      hash = hash & hash; // Cosnvert to 32bit integer
-    }
-    return hash;
-  }
-  
-  function supports_html5_storage() {
-    try {
-      return 'localStorage' in window && window['localStorage'] !== null;
-    } catch (e) {
-      return false;
+  function markChosenReference(evt) {
+    var hash = this.get('hash')
+        link = Y.one(hash);
+        
+    evt.stopPropagation();
+    
+    if(link) {
+      Y.all('#link-list a').removeClass('active');
+      link.addClass('active');
     }
   }
 });

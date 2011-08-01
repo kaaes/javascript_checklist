@@ -14,7 +14,6 @@ ul {padding-left: 1em; list-style-type: none}
 sup {line-height: 0}
 
 ul li { padding-left: 2em}
-ul li:hover {background: rgba(255,255,255,.4)}
 
 a {color: #1F80B5; text-decoration: none; border-bottom: solid 1px #444}
 a:visited {color: #7BA1B5;}
@@ -22,6 +21,7 @@ a:hover {background: #eee}
 
 li a {border-bottom: none; display: none}
 .referenced-list a {display: inline}
+.referenced-list a.active {background: rgba(255,255,255,.4)}
 
 #title {position: relative; padding-left: 1.5em}
 #title::before {
