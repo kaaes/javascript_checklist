@@ -44,7 +44,9 @@ project : /javascript_checklist
 * the `_this`/`that`/`self` pattern
 * closures!
 
-##Regular Expressions
+##JSON
+* a subset of JS?
+  [JSON: The JavaScript subset that isn't][json subset]
 
 ##Inheritance
 
@@ -84,3 +86,4 @@ project : /javascript_checklist
 [hoisting]: http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting
 [module pattern]: http://http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 [design patterns]: http://addyosmani.com/resources/essentialjsdesignpatterns/book/
+[json subset]: http://timelessrepo.com/json-isnt-a-javascript-subset

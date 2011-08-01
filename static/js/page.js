@@ -12,17 +12,17 @@ YUI().use('node', 'json', function(Y){
   });
       
   function createLinkList() {
-    var list = Y.Node.create('<ol></ol>'),
+    var linkList = Y.Node.create('<ol></ol>'),
         links = listContainer.all('a');
         
-    listContainer.append(list);
+    listContainer.append(linkList);
     links.each(function(el, i){
       var index = i + 1,
           elId = 'list-element-' + index,
           parent = el.get('parentNode'),
           item = Y.Node.create('<li></li>');
           
-      listContainer.append(item);
+      linkList.append(item);
       item.append(el);
       el.set('id', elId);
       parent.append('<a href="#' + elId + '" title="' + el.getContent() + '"><sup>[' + index + ']</sup></a>')
