@@ -81,6 +81,8 @@ project : /javascript_checklist
 * design patterns in JS
   [Adequately Good - JavaScript Module Pattern: In-Depth][module pattern]
   [Essential JavaScript Design Patterns For Beginners, Volume 1][design patterns]
+* memory management
+  [Socialcast Engineering - JavaScript Memory Management][memory management]
 
 ##Reference
 
@@ -89,3 +91,4 @@ project : /javascript_checklist
 [design patterns]: http://addyosmani.com/resources/essentialjsdesignpatterns/book/
 [json subset]: http://timelessrepo.com/json-isnt-a-javascript-subset
 [bubbling and capturing]: http://www.quirksmode.org/js/events_order.html
+[memory management]: http://engineering.socialcast.com/2011/06/javascript-memory-management/
