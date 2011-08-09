@@ -16,6 +16,7 @@ project : /javascript_checklist
 * operators precedence
 * how `+` behaves on strings and numbers
 * `||` and `&&`
+   [Web Reflection - Please Stop Reassigning For No Reason!][reassigning]
 * real life usage for bitwise operators `|` `~`, `~~`, `>>>`
 * `typeof` vs `instanceof` 
 
@@ -92,3 +93,4 @@ project : /javascript_checklist
 [json subset]: http://timelessrepo.com/json-isnt-a-javascript-subset
 [bubbling and capturing]: http://www.quirksmode.org/js/events_order.html
 [memory management]: http://engineering.socialcast.com/2011/06/javascript-memory-management/
+[reassigning]: http://webreflection.blogspot.com/2011/08/please-stop-reassigning-for-no-reason.html
